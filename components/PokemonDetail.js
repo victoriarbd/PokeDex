@@ -23,11 +23,9 @@ app.component('pokemon-detail', {
                 Height : {{abilities.height}}
                 <br>
                 Weight : {{abilities.weight}}
-                <br>
                 <p v-for="type in abilities.types">
                   Type : {{type.type.name}}
                 </p>
-                <br>
                 <p v-for="abilitie in abilities.abilities">
                   Abilitie : {{abilitie.ability.name}}
                 </p>

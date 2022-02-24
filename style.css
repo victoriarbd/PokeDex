@@ -1,3 +1,7 @@
+body { 
+	background-color: #CCEEFF; 
+	width:100%;
+}
 
 .image-pre{
 	width: 50%;
@@ -9,4 +13,8 @@
 
 .btn{
 	margin: 2%;
+}
+
+.input{
+	margin-left: 10%;
 }

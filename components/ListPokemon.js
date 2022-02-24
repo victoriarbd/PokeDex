@@ -15,8 +15,11 @@ app.component('list-pokemon', {
     <div class = "container-fluid">
     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
       <div v-for="pokemon in filter_list"
-      :key="pokemons.id_pokemon" style="text-align: center;" class="col pokemoncard">      
-          <img v-bind:src="pokemon.img_url" class="image-poke"/>
+      :key="pokemons.id_pokemon" style="text-align: center;" class="col pokemoncard">
+        <div class="card bg-light mb-3" style="max-width: 40rem;">
+          <div class="card-header">{{pokemon.name}}</div>
+          <div class="card-body">
+          <img v-bind:src="pokemon.img_url" style="width: 200px; height: auto; padding:auto; margin:auto" class="image-poke"/>
           <!-- Button trigger modal -->
           <button v-on:click="getCarac(pokemon.id_pokemon, pokemon.url, pokemon.img_url, pokemon.name)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             Details
@@ -24,12 +27,11 @@ app.component('list-pokemon', {
         <!-- details pokemon !-->
         <pokemon-detail :abilities="abilities"></pokemon-detail>
         <p class="idpokemon">
-          {{pokemon.id_pokemon}}
+        #{{pokemon.id_pokemon}}
         </p>
-        <br/>
-        <p class ="namepokemon">
-          {{pokemon.name}}
-        </p> 
+          </div>
+        </div>      
+          
       </div>
     </div>
   </div>

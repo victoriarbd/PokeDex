@@ -7,8 +7,10 @@ app.component('search-pokemon', {
     template: 
     /*html*/
     `
+      <div class ="input">
+        <p>Search by id or name </p>
         <input v-model="search_poke" name="search" id="search_poke" placeholder="Search...">
-        <button type="button" class="btn btn-outline-primary">Search</button>
+      </div>
     `,
     
     watch : {
