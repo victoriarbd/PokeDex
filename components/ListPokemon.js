@@ -67,7 +67,7 @@ app.component('list-pokemon', {
       filter_list(){
         if (this.filtre != null){
           return this.pokemons.filter(p => { //pr chaque pokemon dans la liste de pokemons
-            return (p.name.toLowerCase().indexOf(this.filtre) > -1) || (p.id_pokemon.toLowerCase().indexOf(this.filtre) > -1) 
+            return (p.name.toLowerCase().indexOf(this.filtre.toLowerCase()) > -1) || (p.id_pokemon.toLowerCase().indexOf(this.filtre.toLowerCase()) > -1) 
           })
         }else{
           return this.pokemons
